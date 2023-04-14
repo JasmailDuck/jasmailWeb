@@ -5,10 +5,10 @@ const S_Overview = () => {
     <section id="S_OverviewWrapper" className=" flex justify-center">
       <div
         id="S_OverviewContainer"
-        className=" max-w-screen-xl w-full border h-screen flex px-5"
+        className=" max-w-screen-xl w-full  h-screen flex px-5"
       >
-        <div className="border flex-1 flex items-start">
-          <div className="border h-96 mt-32 w-full">
+        <div className=" flex-1 flex items-start">
+          <div className=" h-96 mt-32 w-full">
             <div>
               <div className=" text-6xl font-extrabold flex flex-col">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-green-400 mb-1">
@@ -40,7 +40,7 @@ const S_Overview = () => {
           </div>
         </div>
 
-        <div className="border flex-1 "></div>
+        <div className=" flex-1 "></div>
       </div>
     </section>
   );
