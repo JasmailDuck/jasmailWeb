@@ -7,9 +7,9 @@ interface propTypes {
 
 const S_projectCard = (props: propTypes) => {
   return (
-    <div className="  h-full w-[500px] flex-col flex rounded-md  ">
+    <div className="  h-full w-[500px] flex-col flex  mr-4">
       <div className=" flex-1 bg-gradient-to-r from-cyan-400 to-green-400 rounded-t-md "></div>
-      <div className=" h-40 flex flex-col p-5 bg-white">
+      <div className=" h-40 flex flex-col p-5 bg-white rounded-b-md">
         <h1 className=" flex-1 text-md font-semibold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-green-400 tracking-widest">
           {props.type}
         </h1>

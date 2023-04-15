@@ -1,18 +1,18 @@
-import { ArrowRightIcon } from "@heroicons/react/24/solid";
+import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/solid";
 import S_projectCard from "../../componets/cards/S_projectCard";
 
 const S_Projects = () => {
   return (
     <section
       id="S_ProjectWrapper"
-      className=" flex justify-center overflow-x-hidden"
+      className=" flex justify-center overflow-x-hidden mb-5"
     >
       <div
         id="S_Project"
-        className=" max-w-screen-xl w-full  h-screen flex flex-col px-5 "
+        className=" max-w-screen-xl w-full flex flex-col px-5 "
       >
         <div className=" mb-20">
-          <h1 className="text-3xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-green-400 mb-5">
+          <h1 className="text-3xl font-semibold  w-44 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-green-400 mb-5 tracking-widest">
             PROJECTS
           </h1>
           <div className="flex  ">
@@ -31,10 +31,27 @@ const S_Projects = () => {
           </div>
         </div>
 
-        <div className=" relative border h-[450px] ">
+        <div className=" relative h-[450px] z-10 mb-10 ">
           <div className=" absolute h-full flex  ">
             <S_projectCard title="Data Mining and Warehouse" type="Database" />
+            <S_projectCard title="Data Mining and Warehouse" type="Database" />
+            <S_projectCard title="Data Mining and Warehouse" type="Database" />
+            <S_projectCard title="Data Mining and Warehouse" type="Database" />
           </div>
+        </div>
+        <div className=" z-10 flex justify-end">
+          <button
+            title="left"
+            className="bg-white h-14 w-14 mx-1 flex justify-center items-center rounded-md"
+          >
+            <ChevronLeftIcon className=" w-8" />
+          </button>
+          <button
+            title="right"
+            className="bg-white h-14 w-14 mx-1 flex justify-center items-center rounded-md"
+          >
+            <ChevronRightIcon className="w-8" />
+          </button>
         </div>
       </div>
     </section>

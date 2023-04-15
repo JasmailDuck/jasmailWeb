@@ -8,13 +8,13 @@ import S_servicesCard from "../../componets/cards/S_servicesCard";
 
 const S_Service = () => {
   return (
-    <section id="S_ServiceWrapper" className=" flex justify-center">
+    <section id="S_ServiceWrapper" className=" flex justify-center mb-56">
       <div
         id="S_Services"
-        className=" max-w-screen-xl w-full  h-screen flex flex-col px-5"
+        className=" max-w-screen-xl w-full flex flex-col px-5"
       >
         <div className=" flex flex-col items-center mb-32">
-          <h1 className="text-3xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-green-400 mb-5">
+          <h1 className="text-3xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-green-400 mb-5 tracking-widest">
             {" "}
             SERVICES{" "}
           </h1>

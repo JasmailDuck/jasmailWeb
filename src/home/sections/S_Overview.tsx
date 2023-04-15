@@ -5,7 +5,7 @@ const S_Overview = () => {
     <section id="S_OverviewWrapper" className=" flex justify-center">
       <div
         id="S_OverviewContainer"
-        className=" max-w-screen-xl w-full  h-screen flex px-5"
+        className=" max-w-screen-xl w-full flex px-5 mb-96"
       >
         <div className=" flex-1 flex items-start">
           <div className=" h-96 mt-32 w-full">
