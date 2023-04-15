@@ -5,7 +5,7 @@ const S_Blogs = () => {
   return (
     <section
       id="S_BlogWrapper"
-      className=" flex flex-col items-center bg-black"
+      className=" flex flex-col items-center bg-black mb-32"
     >
       <div className="relative w-full">
         <div className=" absolute w-full h-72 bg-black -top-72" />
@@ -13,7 +13,7 @@ const S_Blogs = () => {
 
       <div id="S_Blog" className=" max-w-screen-xl w-full flex  px-5 ">
         <div className=" flex-1">
-          <div className="sticky top-0 pt-5">
+          <div className="sticky top-0 py-5">
             <h1 className="text-3xl font-bold w-24 text-transparent bg-clip-text  bg-gradient-to-r from-cyan-400 to-green-400 tracking-widest mb-5">
               {" "}
               BLOG{" "}

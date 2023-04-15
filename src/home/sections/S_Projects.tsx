@@ -18,7 +18,7 @@ const S_Projects = () => {
           <div className="flex  ">
             <div className="flex-1 ">
               <h1 className="text-6xl w-2/3 font-black ">
-                Some two liner text that should go here
+                A highlight of my recent doings.
               </h1>
             </div>
 

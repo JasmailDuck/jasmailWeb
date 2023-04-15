@@ -1,4 +1,5 @@
 import Navbar from "../components/navbar/Navbar";
+import S_About from "./sections/S_About";
 import S_Blogs from "./sections/S_Blogs";
 import S_Overview from "./sections/S_Overview";
 import S_Projects from "./sections/S_Projects";
@@ -12,6 +13,7 @@ const index = () => {
       <S_Service />
       <S_Projects />
       <S_Blogs />
+      <S_About />
     </div>
   );
 };
