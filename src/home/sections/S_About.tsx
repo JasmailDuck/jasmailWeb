@@ -1,9 +1,5 @@
-import {
-  AcademicCapIcon,
-  ArrowTopRightOnSquareIcon,
-  BriefcaseIcon,
-} from "@heroicons/react/24/solid";
-import React from "react";
+import { AcademicCapIcon, BriefcaseIcon } from "@heroicons/react/24/solid";
+
 import S_aboutCard from "../../componets/cards/S_aboutCard";
 
 const S_About = () => {
