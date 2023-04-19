@@ -4,9 +4,24 @@ import {
   ArrowTopRightOnSquareIcon,
   UserIcon,
 } from "@heroicons/react/24/solid";
-import S_servicesCard from "../../componets/cards/S_servicesCard";
+import S_servicesCard from "../../components/cards/S_servicesCard";
+import { delay, motion as m, useInView } from "framer-motion";
+import { useRef } from "react";
 
 const S_Service = () => {
+  //------------------------------------------------------ LIB INITS ------------------------------------------------------//
+
+  const titleRef = useRef(null);
+  const subtitleRef = useRef(null);
+  const helpTextRef = useRef(null);
+
+  const titleInView = useInView(titleRef, { once: true });
+  const subtitleInView = useInView(subtitleRef, { once: true });
+  const helpTextInView = useInView(helpTextRef, { once: true });
+
+  //------------------------------------------------------ STATES ------------------------------------------------------//
+
+  //------------------------------------------------------ HTML ------------------------------------------------------//
   return (
     <section id="S_ServiceWrapper" className=" flex justify-center mb-56">
       <div
@@ -14,19 +29,37 @@ const S_Service = () => {
         className=" max-w-screen-xl w-full flex flex-col px-5"
       >
         <div className=" flex flex-col items-center mb-32">
-          <h1 className="text-3xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-green-400 mb-5 tracking-widest">
+          <m.h1
+            ref={titleRef}
+            initial={{ opacity: 0, y: 100 }}
+            animate={titleInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ delay: 0.2, ease: "backInOut", duration: 1 }}
+            className="text-3xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-green-400 mb-5 tracking-widest"
+          >
             {" "}
             SERVICES{" "}
-          </h1>
+          </m.h1>
 
-          <h1 className="text-6xl w-2/3 text-center font-black  ">
+          <m.h1
+            ref={subtitleRef}
+            initial={{ opacity: 0, y: 100 }}
+            animate={subtitleInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ delay: 0.2, ease: "backInOut", duration: 1 }}
+            className="text-6xl w-2/3 text-center font-black  "
+          >
             Workflow that ensures all requirements are met
-          </h1>
-          <div className=" text-neutral-500 flex">
+          </m.h1>
+          <m.div
+            ref={helpTextRef}
+            initial={{ opacity: 0, y: 100 }}
+            animate={helpTextInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ delay: 0.2, ease: "backInOut", duration: 1 }}
+            className=" text-neutral-500 flex"
+          >
             Click on a<span className="underline mx-1">bullet point</span>
             <ArrowTopRightOnSquareIcon className="w-5 mr-1" />
             for more information
-          </div>
+          </m.div>
         </div>
 
         <div className="flex justify-center ">

@@ -1,5 +1,5 @@
 import { ArrowRightIcon } from "@heroicons/react/24/solid";
-import S_blogCard from "../../componets/cards/S_blogCard";
+import S_blogCard from "../../components/cards/S_blogCard";
 
 const S_Blogs = () => {
   return (

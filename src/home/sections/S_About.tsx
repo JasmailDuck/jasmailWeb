@@ -1,6 +1,6 @@
 import { AcademicCapIcon, BriefcaseIcon } from "@heroicons/react/24/solid";
-
-import S_aboutCard from "../../componets/cards/S_aboutCard";
+import { motion as m } from "framer-motion";
+import S_aboutCard from "../../components/cards/S_aboutCard";
 
 const S_About = () => {
   return (
@@ -9,7 +9,7 @@ const S_About = () => {
       className=" flex justify-center h-screen overflow-x-hidden mb-5"
     >
       <div id="S_About" className=" max-w-screen-xl w-full flex flex-col px-5 ">
-        <div className=" flex mb-32">
+        <div className=" flex mb-32 ">
           <div className="pr-5">
             <h1 className="text-3xl font-semibold  text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-green-400 tracking-widest">
               FULL STACK DEVELOPER
