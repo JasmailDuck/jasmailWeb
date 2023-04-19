@@ -1,7 +1,16 @@
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/solid";
 import S_projectCard from "../../components/cards/S_projectCard";
+import { motion as m } from "framer-motion";
+import { useEffect, useState } from "react";
 
 const S_Projects = () => {
+  const [moveBy, setMoveBy] = useState(0);
+  const [disableLeftButton, setDisableLeftButton] = useState(true);
+
+  useEffect(() => {
+    moveBy == 0 ? setDisableLeftButton(true) : setDisableLeftButton(false);
+  }, [moveBy]);
+
   return (
     <section
       id="S_ProjectWrapper"
@@ -32,26 +41,45 @@ const S_Projects = () => {
         </div>
 
         <div className=" relative h-[450px] z-10 mb-10 ">
-          <div className=" absolute h-full flex  ">
+          <m.div
+            animate={{ x: moveBy }}
+            transition={{ duration: 1, ease: "anticipate" }}
+            className=" absolute h-full flex  "
+          >
             <S_projectCard title="Data Mining and Warehouse" type="Database" />
             <S_projectCard title="Data Mining and Warehouse" type="Database" />
             <S_projectCard title="Data Mining and Warehouse" type="Database" />
             <S_projectCard title="Data Mining and Warehouse" type="Database" />
-          </div>
+            <S_projectCard title="Data Mining and Warehouse" type="Database" />
+            <S_projectCard title="Data Mining and Warehouse" type="Database" />
+            <S_projectCard title="Data Mining and Warehouse" type="Database" />
+            <S_projectCard title="Data Mining and Warehouse" type="Database" />
+          </m.div>
         </div>
-        <div className=" z-10 flex justify-end">
-          <button
+        <div className=" z-10 flex justify-end h-20">
+          <m.button
+            animate={disableLeftButton ? { scale: 0 } : {}}
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
             title="left"
             className="bg-white h-14 w-14 mx-1 flex justify-center items-center rounded-md"
+            onClick={() => {
+              moveBy <= 700 * 4 ? setMoveBy(0) : setMoveBy(moveBy + 700);
+            }}
           >
             <ChevronLeftIcon className=" w-8" />
-          </button>
-          <button
+          </m.button>
+          <m.button
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
             title="right"
             className="bg-white h-14 w-14 mx-1 flex justify-center items-center rounded-md"
+            onClick={() => {
+              moveBy <= -700 * 4 ? setMoveBy(0) : setMoveBy(moveBy - 700);
+            }}
           >
             <ChevronRightIcon className="w-8" />
-          </button>
+          </m.button>
         </div>
       </div>
     </section>
