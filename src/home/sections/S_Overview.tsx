@@ -1,8 +1,12 @@
 import { ArrowRightIcon } from "@heroicons/react/24/solid";
-import { motion as m } from "framer-motion";
+import { AnimatePresence, delay, motion as m } from "framer-motion";
 import { useState } from "react";
 
-const S_Overview = () => {
+interface propTypes {
+  setModalState: React.Dispatch<React.SetStateAction<String>>;
+}
+
+const S_Overview = (props: propTypes) => {
   //------------------------------------------------------ STATES ------------------------------------------------------//
 
   const [resumeIsHovered, setResumeIsHovered] = useState(false);
@@ -65,17 +69,19 @@ const S_Overview = () => {
                   Contact
                 </m.button>
               </div>
-              <div
+              <m.div
+                layoutId="download"
+                onClick={() => props.setModalState("download")}
                 onMouseEnter={() => setResumeIsHovered(true)}
                 onMouseLeave={() => setResumeIsHovered(false)}
-                className="ml-5 text-xl self-center flex hover:cursor-pointer"
+                className="ml-5 text-xl self-center flex hover:cursor-pointer bg-white"
               >
                 <h1>Download Resume</h1>
 
-                <m.div animate={resumeIsHovered ? { x: 10 } : {}}>
+                <m.div animate={resumeIsHovered ? { translateX: 10 } : {}}>
                   <ArrowRightIcon className="ml-3 w-6" />
                 </m.div>
-              </div>
+              </m.div>
             </m.div>
           </div>
         </div>
