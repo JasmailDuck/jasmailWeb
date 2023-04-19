@@ -1,4 +1,6 @@
-import React from "react";
+import { AcademicCapIcon, BriefcaseIcon } from "@heroicons/react/24/solid";
+
+import S_aboutCard from "../../componets/cards/S_aboutCard";
 
 const S_About = () => {
   return (
@@ -7,7 +9,7 @@ const S_About = () => {
       className=" flex justify-center h-screen overflow-x-hidden mb-5"
     >
       <div id="S_About" className=" max-w-screen-xl w-full flex flex-col px-5 ">
-        <div className=" flex">
+        <div className=" flex mb-32">
           <div className="pr-5">
             <h1 className="text-3xl font-semibold  text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-green-400 tracking-widest">
               FULL STACK DEVELOPER
@@ -29,6 +31,56 @@ const S_About = () => {
               problems and have honed my expertise in creating practical and
               impactful solutions.
             </p>
+          </div>
+        </div>
+        <div className=" flex">
+          <div className=" flex-1 flex flex-col mr-10 ">
+            <div className="flex items-center mb-16">
+              <AcademicCapIcon className=" w-10 mr-5" />
+              <h1 className=" text-3xl font-bold">Education</h1>
+            </div>
+
+            <S_aboutCard
+              title="Mount Royal University"
+              desc="Bachelor of Computer Information Systems"
+              desc2="Minor in Economics and Finance"
+              duration=" 2019-2023"
+            />
+            <div className="border-b " />
+            <S_aboutCard
+              title="FFCA High School"
+              desc="Highschool Diploma"
+              duration=" 2015-2019"
+            />
+            <div className="border-b " />
+          </div>
+
+          <div className=" flex-1 flex flex-col ml-10 ">
+            <div className="flex items-center mb-16">
+              <BriefcaseIcon className=" w-10 mr-5" />
+              <h1 className=" text-3xl font-bold">Work Experience</h1>
+            </div>
+
+            <S_aboutCard
+              title="Stratsyn Consulting"
+              desc="Data & Business Analyst"
+              desc2="4 Month Work Term"
+              duration=" May 2022- Aug 2022"
+            />
+            <div className="border-b " />
+            <S_aboutCard
+              title="Bytewire Inc"
+              desc="Front-End Developer"
+              duration="Contract Based"
+            />
+            <div className="border-b " />
+            <S_aboutCard
+              title="Safeway"
+              desc="Grocery/Produce Clerk"
+              desc2="Tech Support"
+              duration="2018-2021"
+            />
+            <div className="border-b " />
           </div>
         </div>
       </div>

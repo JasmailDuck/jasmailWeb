@@ -29,29 +29,23 @@ const S_Blogs = () => {
         </div>
         <div className="flex-1">
           <S_blogCard
-            title=" How to create a basic hover effect using framer motion"
-            date="April 6, 2023 | 10 min"
+            title=" How to use Chat-GPT on iOS Siri Shortcuts"
+            date="Month 0, 202X | -\- min"
           />
           <div className="border-b border-neutral-600" />
           <S_blogCard
-            title=" How to create a basic hover effect using framer motion"
-            date="April 6, 2023 | 10 min"
+            title=" Creating a simple discord bot"
+            date="Month 0, 202X | -\- min"
           />
           <div className="border-b border-neutral-600" />
           <S_blogCard
-            title=" How to create a basic hover effect using framer motion"
-            date="April 6, 2023 | 10 min"
+            title=" How to create a fluid modal using framer-motion"
+            date="Month 0, 202X | -\- min"
           />
           <div className="border-b border-neutral-600" />
-          <S_blogCard
-            title=" How to create a basic hover effect using framer motion"
-            date="April 6, 2023 | 10 min"
-          />
+          <S_blogCard title=" To be added..." date="Month 0, 202X | -\- min" />
           <div className="border-b border-neutral-600" />
-          <S_blogCard
-            title=" How to create a basic hover effect using framer motion"
-            date="April 6, 2023 | 10 min"
-          />
+          <S_blogCard title=" To be added..." date="Month 0, 202X | -\- min" />
         </div>
       </div>
     </section>
