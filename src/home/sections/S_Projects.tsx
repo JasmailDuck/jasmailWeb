@@ -42,7 +42,7 @@ const S_Projects = () => {
 
         <div className=" relative h-[450px] z-10 mb-10 ">
           <m.div
-            animate={{ x: moveBy }}
+            animate={{ translateX: moveBy }}
             transition={{ duration: 1, ease: "anticipate" }}
             className=" absolute h-full flex  "
           >

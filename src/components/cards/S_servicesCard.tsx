@@ -40,7 +40,7 @@ const S_servicesCard = (props: propTypes) => {
         transition={{ delay: 0.3, ease: "backInOut", duration: 1 }}
         className=" mb-5 "
       >
-        <props.icon className=" w-20" />
+        <props.icon className=" w-20 " />
       </m.div>
       <div className="mb-5">
         <m.h1

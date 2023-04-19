@@ -5,7 +5,7 @@ const Navbar = () => {
     <nav id="navbarwrapper" className="h-20 flex justify-center">
       <div
         id="navbarcontainer"
-        className=" max-w-screen-xl h-full w-full flex items-center px-5 text-xl font-semibold"
+        className=" max-w-screen-xl h-full w-full flex items-center px-5 text-lg tracking-wider"
       >
         <h1 className=" flex-1  ">Jasmail Duck</h1>
 
