@@ -9,7 +9,7 @@ const S_Activity = () => {
         id="S_Activity"
         className=" max-w-screen-xl w-full flex flex-col px-5 mb-20 "
       >
-        <div className="flex flex-col items-end">
+        <div className="flex flex-col items-end mb-32">
           <h1 className="text-3xl font-semibold  w-44 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-green-400 mb-5 tracking-widest">
             ACTIVITES
           </h1>
@@ -17,66 +17,33 @@ const S_Activity = () => {
             It's not just all about tech!
           </h1>
         </div>
-      </div>
-      <div className=" h-[600px] w-full bg-snowboard bg-fixed" />
 
-      <div className="relative w-full h-[600px]">
-        <div className=" absolute bg-black h-[500px] rounded-md w-[800px] -top-96 left-44 flex justify-center items-center">
-          <h1 className="text-7xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-green-400 mb-5 tracking-widest">
-            SNOWBOARDING
-          </h1>
-        </div>
-
-        <div className=" flex justify-center h-full ">
-          <div className="max-w-screen-xl w-full flex flex-col justify-center">
-            <h1 className=" text-neutral-500 text-2xl mb-5">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi
-              quia vitae a incidunt aperiam fuga reprehenderit non itaque maxime
-              eius.
-            </h1>
-
-            <h1 className=" text-neutral-500 text-2xl mb-5">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi
-              quia vitae a incidunt aperiam fuga reprehenderit non itaque maxime
-              eius.
-            </h1>
-
-            <h1 className=" text-neutral-500 text-2xl">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi
-              quia vitae a incidunt aperiam fuga reprehenderit non itaque maxime
-              eius.
-            </h1>
+        <div className=" flex w-full h-[600px] mb-10 ">
+          <div className="flex flex-col flex-1 w-full mr-5 ">
+            <div className="flex-1 bg-snowboard bg-cover rounded-tl-md" />
+            <div className="flex flex-1 mt-5">
+              <div className=" flex-1 bg-basketball bg-cover mr-5 rounded-bl-md " />
+              <div className=" flex-1 bg-football bg-cover" />
+            </div>
+          </div>
+          <div className="flex w-1/3 ">
+            <div className=" flex-1 bg-soccer bg-cover rounded-r-md" />
           </div>
         </div>
-      </div>
-      <div className=" h-[600px] w-full bg-soccer bg-fixed bg-cover" />
-      <div className="relative w-full h-[600px]">
-        <div className=" absolute bg-black h-[500px] rounded-md w-[800px] -top-96 right-44 flex justify-center items-center">
-          <h1 className="text-7xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-green-400 mb-5 tracking-widest">
-            SOCCER
-          </h1>
-        </div>
-        <div className=" flex justify-center h-full ">
-          <div className="max-w-screen-xl w-full flex flex-col justify-center">
-            <h1 className=" text-neutral-500 text-2xl mb-5">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi
-              quia vitae a incidunt aperiam fuga reprehenderit non itaque maxime
-              eius.
-            </h1>
 
-            <h1 className=" text-neutral-500 text-2xl mb-5">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi
-              quia vitae a incidunt aperiam fuga reprehenderit non itaque maxime
-              eius.
-            </h1>
-
-            <h1 className=" text-neutral-500 text-2xl">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi
-              quia vitae a incidunt aperiam fuga reprehenderit non itaque maxime
-              eius.
-            </h1>
-          </div>
-        </div>
+        <h1 className="text-3xl font-semibold  mb-5 tracking-widest">Sports</h1>
+        <p className=" text-lg text-neutral-500">
+          As a lifelong sports enthusiast, I have honed my skills and passion
+          for various sports throughout the years. From my early days as a
+          skilled soccer player, to my recent endeavors in basketball, my love
+          for sports has always been a driving force in my life. With a keen eye
+          for strategy and a deep appreciation for the athleticism and
+          camaraderie that sports bring, I am constantly pushing myself to excel
+          in every game. Whether it's scoring goals on the soccer field, sinking
+          baskets on the basketball court, or immersing myself in the thrilling
+          world of American football as a devoted fan, sports are not just a
+          pastime for me - they are a way of enjoying life.
+        </p>
       </div>
     </section>
   );

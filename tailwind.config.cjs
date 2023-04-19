@@ -9,6 +9,8 @@ module.exports = {
       backgroundImage: {
         snowboard: 'url("assets/bg/bg_snowboard.jpg")',
         soccer: 'url("assets/bg/bg_soccer.jpg")',
+        basketball: 'url("assets/bg/bg_basketball.jpg")',
+        football: 'url("assets/bg/bg_football.jpg")',
       },
     },
   },
