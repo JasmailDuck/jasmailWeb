@@ -1,5 +1,5 @@
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/solid";
-import S_projectCard from "../../componets/cards/S_projectCard";
+import S_projectCard from "../../components/cards/S_projectCard";
 
 const S_Projects = () => {
   return (
