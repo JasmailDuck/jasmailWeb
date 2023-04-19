@@ -14,6 +14,7 @@ interface propTypes {
     } & RefAttributes<SVGSVGElement>
   >;
   width?: string;
+  setModalID: React.Dispatch<React.SetStateAction<String>>;
 }
 
 const S_servicesCard = (props: propTypes) => {
@@ -65,10 +66,14 @@ const S_servicesCard = (props: propTypes) => {
       <ul className=" list-inside list-disc font-bold text-lg flex flex-col">
         <m.li
           ref={l1Ref}
+          layoutId={props.l1.replaceAll(/\s/g, "")}
           initial={{ opacity: 0, y: 100 }}
           animate={l1InView ? { opacity: 1, y: 0 } : {}}
           transition={{ delay: 0.3, ease: "backInOut", duration: 1 }}
-          className=" my-2 underline"
+          className=" my-2 underline hover: cursor-pointer bg-white"
+          onClick={() => {
+            props.setModalID(props.l1.replaceAll(/\s/g, ""));
+          }}
         >
           {props.l1}
         </m.li>
@@ -77,7 +82,8 @@ const S_servicesCard = (props: propTypes) => {
           initial={{ opacity: 0, y: 100 }}
           animate={l2InView ? { opacity: 1, y: 0 } : {}}
           transition={{ delay: 0.3, ease: "backInOut", duration: 1 }}
-          className=" my-2 underline"
+          className=" my-2 underline hover:cursor-pointer"
+          onClick={() => props.setModalID(props.l2.replaceAll(/\s/g, ""))}
         >
           {props.l2}
         </m.li>
@@ -86,7 +92,8 @@ const S_servicesCard = (props: propTypes) => {
           initial={{ opacity: 0, y: 100 }}
           animate={l3InView ? { opacity: 1, y: 0 } : {}}
           transition={{ delay: 0.3, ease: "backInOut", duration: 1 }}
-          className=" my-2 underline"
+          className=" my-2 underline hover:cursor-pointer"
+          onClick={() => props.setModalID(props.l3.replaceAll(/\s/g, ""))}
         >
           {props.l3}
         </m.li>

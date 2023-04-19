@@ -5,10 +5,14 @@ import {
   UserIcon,
 } from "@heroicons/react/24/solid";
 import S_servicesCard from "../../components/cards/S_servicesCard";
-import { delay, motion as m, useInView } from "framer-motion";
-import { useRef } from "react";
+import { AnimatePresence, motion as m, useInView } from "framer-motion";
+import { useRef, useState } from "react";
 
-const S_Service = () => {
+interface propTypes {
+  setModalState: React.Dispatch<React.SetStateAction<String>>;
+}
+
+const S_Service = (props: propTypes) => {
   //------------------------------------------------------ LIB INITS ------------------------------------------------------//
 
   const titleRef = useRef(null);
@@ -18,8 +22,6 @@ const S_Service = () => {
   const titleInView = useInView(titleRef, { once: true });
   const subtitleInView = useInView(subtitleRef, { once: true });
   const helpTextInView = useInView(helpTextRef, { once: true });
-
-  //------------------------------------------------------ STATES ------------------------------------------------------//
 
   //------------------------------------------------------ HTML ------------------------------------------------------//
   return (
@@ -71,6 +73,7 @@ const S_Service = () => {
             l3="Prototyping"
             icon={Square3Stack3DIcon}
             width="w-72"
+            setModalID={props.setModalState}
           />
           <S_servicesCard
             title="Applications I'm fluent in"
@@ -80,6 +83,7 @@ const S_Service = () => {
             l3="Data"
             icon={BoltIcon}
             width=" w-80"
+            setModalID={props.setModalState}
           />
           <S_servicesCard
             title="What can you expect"
@@ -89,6 +93,7 @@ const S_Service = () => {
             l3="Efficient and maintainable"
             icon={UserIcon}
             width="w-72"
+            setModalID={props.setModalState}
           />
         </div>
       </div>
