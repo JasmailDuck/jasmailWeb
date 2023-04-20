@@ -1,15 +1,27 @@
 import { ArrowRightIcon } from "@heroicons/react/24/solid";
 import { AnimatePresence, delay, motion as m } from "framer-motion";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { PageUtils } from "../../components/utils/pageUtils";
 
 interface propTypes {
   setModalState: React.Dispatch<React.SetStateAction<String>>;
+  modelStateID: String;
 }
 
 const S_Overview = (props: propTypes) => {
   //------------------------------------------------------ STATES ------------------------------------------------------//
 
   const [resumeIsHovered, setResumeIsHovered] = useState(false);
+
+  useEffect(() => {
+    props.modelStateID == ""
+      ? PageUtils.enableScrolling()
+      : PageUtils.disableScrolling();
+
+    return () => {
+      PageUtils.enableScrolling();
+    };
+  });
 
   //------------------------------------------------------ HTML ------------------------------------------------------//
   return (

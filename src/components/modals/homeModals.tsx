@@ -1,4 +1,6 @@
+import { ArrowLeftOnRectangleIcon } from "@heroicons/react/24/solid";
 import { AnimatePresence, motion as m } from "framer-motion";
+import M_fullStackDevCard from "../cards/M_fullStackDevCard";
 
 //------------------------------------------------------ MODAL ------------------------------------------------------//
 export const downloadResumeModal = (
@@ -70,68 +72,116 @@ export const fullstackDevModal = (
     <AnimatePresence>
       {modelStateID == "FullStackDevelopment" && (
         <m.div
-          initial={{ opacity: 0 }}
-          animate={modelStateID ? { opacity: 1 } : {}}
-          exit={{ opacity: 0 }}
-          className="bg-black/50 backdrop-blur-2xl w-screen h-full absolute  z-20 flex justify-center items-center"
+          layoutId="FullStackDevelopment"
+          transition={{ ease: "anticipate", duration: 1 }}
+          className="w-screen h-full top-0 left-0 absolute z-20 flex justify-center items-center bg-white overflow-y-auto overflow-x-hidden"
         >
-          <m.div
-            layoutId="FullStackDevelopment"
-            className=" flex items-center justify-center w-full max-w-screen-xl h-screen"
-          >
-            <div className="w-full flex flex-col m-5 bg-white px-5 pb-5 rounded-lg ">
-              <div className=" w-full flex h-20 items-center">
-                <h1 className=" flex-1 text-5xl font-bold">
-                  Full Stack Development
-                </h1>
-
-                <h1
-                  className="text-5xl font-bold"
-                  onClick={() => setModalStateId("")}
-                >
-                  X
-                </h1>
-              </div>
-
-              <div>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia
-                itaque sit ipsum veniam, autem maiores facilis similique
-                cupiditate a, illum vitae reprehenderit sunt distinctio. Fugiat
-                ea a consequatur at ipsa? Distinctio earum voluptatum ipsam
-                numquam dolores nobis dignissimos veniam suscipit cupiditate
-                consectetur! Quam tempora officiis obcaecati error ab labore
-                facere quia, vitae voluptas at nostrum corporis esse illum
-                voluptatum velit accusantium itaque quas. Numquam deleniti
-                nostrum fuga labore earum ea aspernatur hic voluptatum quas
-                sapiente, omnis ipsa cupiditate doloremque esse dicta corrupti
-                iure vitae neque aliquid recusandae suscipit eos delectus! Hic
-                cumque minus nostrum natus fugit, doloribus consequuntur commodi
-                laborum numquam eaque nihil. Illum officiis eos exercitationem,
-                at quia necessitatibus a quasi, provident, numquam consequuntur
-                ex commodi ut expedita quis neque hic eius accusamus ab saepe
-                praesentium. Quae debitis et inventore ipsum nobis, iure eos
-                natus optio necessitatibus! Obcaecati repudiandae minus
-                provident enim quas veniam vero quisquam natus voluptatum dolore
-                tenetur atque officiis mollitia quibusdam ullam consectetur
-                nulla harum adipisci, laudantium ipsum reiciendis facilis!
-                Perferendis eaque sunt delectus dolorum, nisi dicta animi in!
-                Ullam, reiciendis culpa totam commodi deserunt qui in optio.
-                Minima, est doloribus provident, reiciendis aspernatur
-                voluptatibus praesentium in dolores deserunt eius, sequi ad
-                minus! Soluta dicta impedit ipsa accusamus modi odit optio, id
-                qui quis pariatur repellat voluptas rerum sunt placeat error
-                minima nobis beatae sequi maiores ea nihil et quod labore neque!
-                Officiis odit corrupti, molestiae blanditiis architecto officia
-                aspernatur temporibus, dicta rerum numquam accusamus tempora.
-                Excepturi quidem vero reprehenderit cumque magnam dolorum nemo
-                earum corporis eos? Culpa, nam sit maxime qui quibusdam ipsum
-                provident? Incidunt adipisci quasi voluptatem ullam ab tempora
-                at non sit officiis, nemo quibusdam nostrum voluptates, libero
-                illo iste ipsa quod maiores reiciendis quis eligendi
-                repudiandae. Alias repudiandae hic harum. Aperiam soluta maiores
-                dolorem saepe fugiat sint quas architecto est natus tenetur!
+          <m.div className=" flex flex-col w-full max-w-screen-xl  h-screen p-5 m-5 ">
+            <div className=" flex items-center mb-10">
+              <h1 className="text-3xl flex-1 font-semibold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-green-400  tracking-widest">
+                Full Stack Development
+              </h1>
+              <div
+                onClick={() => setModalStateId("")}
+                className=" flex items-center hover:cursor-pointer"
+              >
+                <h1 className=" mx-2 text-lg">Go Back</h1>
+                <ArrowLeftOnRectangleIcon className="w-6" />
               </div>
             </div>
+
+            <div className=" mb-5 ">
+              <h1 className="text-6xl font-black  ">
+                An overview what I can do and know.
+              </h1>
+            </div>
+            <div className=" flex flex-wrap mb-2">
+              <M_fullStackDevCard title={"Java"} />
+              <M_fullStackDevCard title={"Python"} />
+              <M_fullStackDevCard title={"Kotlin"} />
+              <M_fullStackDevCard title={"Dart"} />
+            </div>
+            <div className=" flex flex-wrap mb-2">
+              <M_fullStackDevCard title={"HTML"} />
+              <M_fullStackDevCard title={"CSS"} />
+              <M_fullStackDevCard title={"JS"} />
+              <M_fullStackDevCard title={"TS"} />
+              <M_fullStackDevCard title={"PHP"} />
+            </div>
+
+            <div className=" flex flex-wrap mb-10">
+              <M_fullStackDevCard title={"Node.js"} />
+              <M_fullStackDevCard title={"React"} />
+              <M_fullStackDevCard title={"Vite"} />
+              <M_fullStackDevCard title={"Tailwind"} />
+              <M_fullStackDevCard title={"Flutter"} />
+              <M_fullStackDevCard title={"Prisma"} />
+            </div>
+
+            <h1 className="text-4xl font-black ">In Depth</h1>
+            <p className=" text-xl text-neutral-500 mb-5">
+              As an experienced developer proficient in multiple programming
+              languages, including Java, Python, Kotlin, Dart, HTML, CSS,
+              JavaScript, TypeScript, PHP, Node.js, React, Vite, Tailwind,
+              Flutter, and Prisma, I bring a diverse skill set to the table.
+              With a strong foundation in modern web and mobile development
+              technologies, I am eager to expand my knowledge further by
+              learning additional languages and tools.
+            </p>
+
+            <ul className="text-xl text-neutral-500  p-5 mr-1 flex-1">
+              <li className=" p-5 border-y">
+                Expertise in Java, Python, Kotlin, Dart, and other languages.
+              </li>
+              <li className=" p-5 border-b">
+                Wide range of application development experience, including
+                server-side, front-end, and mobile app development.
+              </li>
+              <li className=" p-5 border-b">
+                Strong skills in building robust, scalable, and high-performance
+                applications.
+              </li>
+              <li className=" p-5 border-b">
+                Utilization of best practices, design patterns, and cutting-edge
+                technologies.
+              </li>
+            </ul>
+
+            <p className="text-xl bg-gradient-to-r from-cyan-400 text-center to-green-400 p-5 text-white rounded-lg my-5 flex-1">
+              In addition to my programming skills, I am also proficient in
+              HTML, CSS, JavaScript, and TypeScript, which enable me to create
+              dynamic and visually appealing user interfaces. I have hands-on
+              experience with PHP, Node.js, and frameworks such as React, Vite,
+              and Tailwind, which provide me with the ability to develop
+              responsive web applications and leverage the power of the backend
+              for data processing.
+            </p>
+
+            <p className=" text-xl text-neutral-500 mb-5">
+              Furthermore, I am skilled in Flutter, a popular cross-platform
+              framework for mobile app development, and Prisma, a powerful ORM
+              (Object Relational Mapping) tool for building scalable and
+              performant databases. With my existing knowledge and expertise, I
+              am well-equipped to adapt and learn new languages and tools, and I
+              am excited about the opportunities they will bring.
+            </p>
+            <p className=" text-xl text-neutral-500 mb-5">
+              As a passionate learner, I am always eager to acquire new skills
+              and stay up-to-date with the latest advancements in the field of
+              software development. My diverse skill set and willingness to
+              learn make me a valuable asset to any development team, and I am
+              committed to delivering high-quality solutions that meet and
+              exceed client expectations.
+            </p>
+            <p className=" text-xl text-neutral-500 pb-10">
+              In conclusion, with a solid foundation in multiple programming
+              languages and a strong desire to learn more languages and tools, I
+              am well-prepared to take on challenging projects and contribute to
+              innovative software development initiatives. I am excited about
+              the potential for growth and opportunities that expanding my skill
+              set will bring, and I am eager to continue my journey as a
+              lifelong learner in the dynamic world of technology.
+            </p>
           </m.div>
         </m.div>
       )}

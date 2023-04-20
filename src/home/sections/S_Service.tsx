@@ -6,10 +6,12 @@ import {
 } from "@heroicons/react/24/solid";
 import S_servicesCard from "../../components/cards/S_servicesCard";
 import { AnimatePresence, motion as m, useInView } from "framer-motion";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import { PageUtils } from "../../components/utils/pageUtils";
 
 interface propTypes {
   setModalState: React.Dispatch<React.SetStateAction<String>>;
+  modelStateID: String;
 }
 
 const S_Service = (props: propTypes) => {
@@ -22,6 +24,16 @@ const S_Service = (props: propTypes) => {
   const titleInView = useInView(titleRef, { once: true });
   const subtitleInView = useInView(subtitleRef, { once: true });
   const helpTextInView = useInView(helpTextRef, { once: true });
+
+  useEffect(() => {
+    props.modelStateID == ""
+      ? PageUtils.enableScrolling()
+      : PageUtils.disableScrolling();
+
+    return () => {
+      PageUtils.enableScrolling();
+    };
+  });
 
   //------------------------------------------------------ HTML ------------------------------------------------------//
   return (

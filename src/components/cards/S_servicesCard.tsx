@@ -70,7 +70,7 @@ const S_servicesCard = (props: propTypes) => {
           initial={{ opacity: 0, y: 100 }}
           animate={l1InView ? { opacity: 1, y: 0 } : {}}
           transition={{ delay: 0.3, ease: "backInOut", duration: 1 }}
-          className=" my-2 underline hover: cursor-pointer bg-white"
+          className=" my-2 underline hover:cursor-pointer"
           onClick={() => {
             props.setModalID(props.l1.replaceAll(/\s/g, ""));
           }}

@@ -22,8 +22,8 @@ const index = () => {
       </div>
 
       <Navbar />
-      <S_Overview setModalState={setModalStateId} />
-      <S_Service setModalState={setModalStateId} />
+      <S_Overview modelStateID={modelStateID} setModalState={setModalStateId} />
+      <S_Service modelStateID={modelStateID} setModalState={setModalStateId} />
       <S_Projects />
       <S_Blogs />
       <S_About />
