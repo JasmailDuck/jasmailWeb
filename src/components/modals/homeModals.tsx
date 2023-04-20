@@ -73,8 +73,8 @@ export const fullstackDevModal = (
       {modelStateID == "FullStackDevelopment" && (
         <m.div
           layoutId="FullStackDevelopment"
-          transition={{ ease: "anticipate", duration: 1 }}
-          className="w-screen h-full top-0 left-0 absolute z-20 flex justify-center items-center bg-white overflow-y-auto overflow-x-hidden"
+          transition={{ ease: "easeInOut", duration: 0.5 }}
+          className="w-screen h-full top-0 left-0 absolute z-20 flex justify-center items-center bg-white/50 backdrop-blur-2xl overflow-y-auto overflow-x-hidden"
         >
           <m.div className=" flex flex-col w-full max-w-screen-xl  h-screen p-5 m-5 ">
             <div className=" flex items-center mb-10">
