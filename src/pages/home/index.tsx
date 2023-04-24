@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Navbar from "../components/navbar/Navbar";
+import Navbar from "../../components/navbar/Navbar";
 import S_About from "./sections/S_About";
 import S_Activity from "./sections/S_Activity";
 import S_Blogs from "./sections/S_Blogs";
@@ -9,7 +9,7 @@ import S_Service from "./sections/S_Service";
 import {
   downloadResumeModal,
   fullstackDevModal,
-} from "../components/modals/homeModals";
+} from "../../components/modals/homeModals";
 
 const index = () => {
   const [modelStateID, setModalStateId] = useState<String>("");

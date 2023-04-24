@@ -4,10 +4,10 @@ import {
   ArrowTopRightOnSquareIcon,
   UserIcon,
 } from "@heroicons/react/24/solid";
-import S_servicesCard from "../../components/cards/S_servicesCard";
+import S_servicesCard from "../../../components/cards/S_servicesCard";
 import { AnimatePresence, motion as m, useInView } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
-import { PageUtils } from "../../components/utils/pageUtils";
+import { PageUtils } from "../../../components/utils/pageUtils";
 
 interface propTypes {
   setModalState: React.Dispatch<React.SetStateAction<String>>;

@@ -1,6 +1,6 @@
 import { AcademicCapIcon, BriefcaseIcon } from "@heroicons/react/24/solid";
 import { motion as m } from "framer-motion";
-import S_aboutCard from "../../components/cards/S_aboutCard";
+import S_aboutCard from "../../../components/cards/S_aboutCard";
 
 const S_About = () => {
   return (

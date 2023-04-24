@@ -1,5 +1,5 @@
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/solid";
-import S_projectCard from "../../components/cards/S_projectCard";
+import S_projectCard from "../../../components/cards/S_projectCard";
 import { motion as m } from "framer-motion";
 import { useEffect, useState } from "react";
 
