@@ -1,3 +1,4 @@
+import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/solid";
 import { motion as m, useInView } from "framer-motion";
 import { RefAttributes, SVGProps, useRef } from "react";
 
@@ -63,41 +64,43 @@ const S_servicesCard = (props: propTypes) => {
           {props.desc}
         </m.p>
       </div>
-      <ul className=" list-inside list-disc font-bold text-lg flex flex-col">
-        <m.li
+      <div className=" font-bold text-lg flex flex-col">
+        <m.div
           ref={l1Ref}
-          layoutId={props.l1.replaceAll(/\s/g, "")}
           initial={{ opacity: 0, y: 100 }}
           animate={l1InView ? { opacity: 1, y: 0 } : {}}
           transition={{ delay: 0.3, ease: "easeInOut", duration: 1 }}
-          className=" my-2  hover:cursor-pointer"
+          className=" my-2  hover:cursor-pointer flex"
           onClick={() => {
             props.setModalID(props.l1.replaceAll(/\s/g, ""));
           }}
         >
           {props.l1}
-        </m.li>
-        <m.li
+          <ArrowTopRightOnSquareIcon className=" w-5 mx-1" />
+        </m.div>
+        <m.div
           ref={l2Ref}
           initial={{ opacity: 0, y: 100 }}
           animate={l2InView ? { opacity: 1, y: 0 } : {}}
           transition={{ delay: 0.3, ease: "easeInOut", duration: 1 }}
-          className=" my-2  hover:cursor-pointer"
+          className=" my-2  hover:cursor-pointer flex"
           onClick={() => props.setModalID(props.l2.replaceAll(/\s/g, ""))}
         >
           {props.l2}
-        </m.li>
-        <m.li
+          <ArrowTopRightOnSquareIcon className=" w-5 mx-1" />
+        </m.div>
+        <m.div
           ref={l3Ref}
           initial={{ opacity: 0, y: 100 }}
           animate={l3InView ? { opacity: 1, y: 0 } : {}}
           transition={{ delay: 0.3, ease: "easeInOut", duration: 1 }}
-          className=" my-2  hover:cursor-pointer"
+          className=" my-2  hover:cursor-pointer flex"
           onClick={() => props.setModalID(props.l3.replaceAll(/\s/g, ""))}
         >
           {props.l3}
-        </m.li>
-      </ul>
+          <ArrowTopRightOnSquareIcon className=" w-5 mx-1" />
+        </m.div>
+      </div>
     </div>
   );
 };
