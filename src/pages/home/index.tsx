@@ -7,9 +7,16 @@ import S_Overview from "./sections/S_Overview";
 import S_Projects from "./sections/S_Projects";
 import S_Service from "./sections/S_Service";
 import {
+  cleanFunctionalModal,
   dataAnalysisModal,
+  dataModal,
   downloadResumeModal,
+  efficientAndMaintainable,
   fullstackDevModal,
+  multimediaModal,
+  programmingModal,
+  prototypingModal,
+  userFriendlyModal,
 } from "../../components/modals/homeModals";
 
 const index = () => {
@@ -21,6 +28,13 @@ const index = () => {
         {downloadResumeModal(modelStateID, setModalStateId)}
         {fullstackDevModal(modelStateID, setModalStateId)}
         {dataAnalysisModal(modelStateID, setModalStateId)}
+        {prototypingModal(modelStateID, setModalStateId)}
+        {multimediaModal(modelStateID, setModalStateId)}
+        {programmingModal(modelStateID, setModalStateId)}
+        {dataModal(modelStateID, setModalStateId)}
+        {cleanFunctionalModal(modelStateID, setModalStateId)}
+        {userFriendlyModal(modelStateID, setModalStateId)}
+        {efficientAndMaintainable(modelStateID, setModalStateId)}
       </div>
 
       <Navbar />
