@@ -14,7 +14,7 @@ export const downloadResumeModal = (
           initial={{ opacity: 0 }}
           animate={modelStateID ? { opacity: 1 } : {}}
           exit={{ opacity: 0 }}
-          className="bg-white/50 backdrop-blur-2xl w-screen h-full top-0 left-0 absolute z-20 flex justify-center items-center"
+          className="bg-white/50 backdrop-blur-2xl w-screen h-full top-0 left-0 absolute z-20 flex justify-center items-center "
         >
           <m.div layoutId="download" className=" flex flex-col justify-center">
             <h1 className=" text-3xl mb-5 font-bold  w-72">
@@ -88,7 +88,7 @@ export const fullstackDevModal = (
               }}
               exit={{ opacity: 0, translateY: 100 }}
               transition={{ ease: "easeInOut", duration: 0.5 }}
-              className=" bg-white h-96 w-5/6 drop-shadow-2xl rounded-lg p-5 flex flex-col "
+              className=" bg-white w-5/6 drop-shadow-2xl rounded-lg p-5 flex flex-col "
             >
               <div className=" mb-5">
                 <m.h1
@@ -101,7 +101,7 @@ export const fullstackDevModal = (
                 </m.h1>
               </div>
 
-              <m.div className=" flex-1 flex flex-wrap justify-center items-center">
+              <m.div className="flex flex-wrap justify-center items-center text-center justify-self-center ">
                 <M_skillCard listPos={1} title={"Java"} />
                 <M_skillCard listPos={2} title={"Python"} />
                 <M_skillCard listPos={3} title={"Swift"} />
@@ -115,14 +115,94 @@ export const fullstackDevModal = (
                 <M_skillCard listPos={11} title={"XML"} />
                 <M_skillCard listPos={12} title={"Latex"} />
               </m.div>
-              <div className=" relative">
+              <div className=" relative flex-1">
                 <m.button
                   initial={{ scale: 0 }}
                   animate={{ scale: 1 }}
                   exit={{ scale: 0 }}
+                  whileHover={{
+                    scale: 1.05,
+                    transition: { delay: 0, ease: "easeInOut" },
+                  }}
+                  whileTap={{
+                    scale: 0.9,
+                    transition: { delay: 0, ease: "easeInOut" },
+                  }}
                   transition={{ duration: 0.5, ease: "easeInOut", delay: 1.3 }}
                   onClick={() => setModalStateId("")}
-                  className=" bg-gradient-to-br from-cyan-400 to-green-400 p-3 rounded-lg w-32 text-white font-bold absolute right-0  "
+                  className=" bg-gradient-to-br from-cyan-400 to-green-400 p-3 rounded-lg w-32 text-white font-bold absolute right-0 -bottom-10  "
+                >
+                  CLOSE
+                </m.button>
+              </div>
+            </m.div>
+          </m.div>
+        </m.div>
+      )}
+    </AnimatePresence>
+  );
+};
+export const dataAnalysisModal = (
+  modelStateID: String,
+  setModalStateId: React.Dispatch<React.SetStateAction<String>>
+) => {
+  return (
+    <AnimatePresence>
+      {modelStateID == "Data/BusinessAnalysis" && (
+        <m.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0, transition: { delay: 0.5, ease: "easeInOut" } }}
+          transition={{ ease: "easeInOut", duration: 0.5 }}
+          className="w-screen h-full top-0 left-0 absolute z-20 flex justify-center items-center bg-black/10 backdrop-blur-xl overflow-y-auto overflow-x-hidden"
+        >
+          <m.div className=" flex flex-col items-center justify-center w-full max-w-screen-xl  h-screen p-5">
+            <m.div
+              initial={{ opacity: 0, translateY: 100 }}
+              animate={{
+                opacity: 1,
+                translateY: 0,
+                transition: { ease: "easeInOut", delay: 0.5 },
+              }}
+              exit={{ opacity: 0, translateY: 100 }}
+              transition={{ ease: "easeInOut", duration: 0.5 }}
+              className=" bg-white  w-5/6 drop-shadow-2xl rounded-lg p-5 flex flex-col "
+            >
+              <div className=" mb-5">
+                <m.h1
+                  initial={{ opacity: 0, translateY: 100 }}
+                  animate={{ opacity: 1, translateY: 0 }}
+                  transition={{ ease: "easeInOut", duration: 0.5, delay: 0.6 }}
+                  className=" text-xl font-bold"
+                >
+                  Data/Business Analysis | Skill Showcase
+                </m.h1>
+              </div>
+
+              <m.div className=" flex flex-wrap justify-center items-center text-center justify-self-center ">
+                <M_skillCard listPos={1} title={"Power BI"} />
+                <M_skillCard listPos={2} title={"Power Apps"} />
+                <M_skillCard listPos={3} title={"MySQL"} />
+                <M_skillCard listPos={4} title={"Mongo DB"} />
+                <M_skillCard listPos={5} title={"Excel"} />
+                <M_skillCard listPos={6} title={"Jupyter Notebook"} />
+              </m.div>
+              <div className=" relative flex-1">
+                <m.button
+                  initial={{ scale: 0 }}
+                  animate={{ scale: 1 }}
+                  exit={{ scale: 0 }}
+                  whileHover={{
+                    scale: 1.05,
+                    transition: { delay: 0, ease: "easeInOut" },
+                  }}
+                  whileTap={{
+                    scale: 0.9,
+                    transition: { delay: 0, ease: "easeInOut" },
+                  }}
+                  transition={{ duration: 0.5, ease: "easeInOut", delay: 1.3 }}
+                  onClick={() => setModalStateId("")}
+                  className=" bg-gradient-to-br from-cyan-400 to-green-400 p-3 rounded-lg w-32 text-white font-bold absolute right-0 -bottom-10  "
                 >
                   CLOSE
                 </m.button>

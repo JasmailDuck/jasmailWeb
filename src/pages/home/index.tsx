@@ -7,6 +7,7 @@ import S_Overview from "./sections/S_Overview";
 import S_Projects from "./sections/S_Projects";
 import S_Service from "./sections/S_Service";
 import {
+  dataAnalysisModal,
   downloadResumeModal,
   fullstackDevModal,
 } from "../../components/modals/homeModals";
@@ -19,6 +20,7 @@ const index = () => {
       <div className=" fixed h-full z-50 top-0">
         {downloadResumeModal(modelStateID, setModalStateId)}
         {fullstackDevModal(modelStateID, setModalStateId)}
+        {dataAnalysisModal(modelStateID, setModalStateId)}
       </div>
 
       <Navbar />

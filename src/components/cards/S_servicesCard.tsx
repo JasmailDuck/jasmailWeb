@@ -70,7 +70,7 @@ const S_servicesCard = (props: propTypes) => {
           initial={{ opacity: 0, y: 100 }}
           animate={l1InView ? { opacity: 1, y: 0 } : {}}
           transition={{ delay: 0.3, ease: "easeInOut", duration: 1 }}
-          className=" my-2  hover:cursor-pointer flex"
+          className=" my-2  hover:cursor-pointer flex hover:underline"
           onClick={() => {
             props.setModalID(props.l1.replaceAll(/\s/g, ""));
           }}
@@ -83,7 +83,7 @@ const S_servicesCard = (props: propTypes) => {
           initial={{ opacity: 0, y: 100 }}
           animate={l2InView ? { opacity: 1, y: 0 } : {}}
           transition={{ delay: 0.3, ease: "easeInOut", duration: 1 }}
-          className=" my-2  hover:cursor-pointer flex"
+          className=" my-2  hover:cursor-pointer flex hover:underline"
           onClick={() => props.setModalID(props.l2.replaceAll(/\s/g, ""))}
         >
           {props.l2}
@@ -94,7 +94,7 @@ const S_servicesCard = (props: propTypes) => {
           initial={{ opacity: 0, y: 100 }}
           animate={l3InView ? { opacity: 1, y: 0 } : {}}
           transition={{ delay: 0.3, ease: "easeInOut", duration: 1 }}
-          className=" my-2  hover:cursor-pointer flex"
+          className=" my-2  hover:cursor-pointer flex hover:underline"
           onClick={() => props.setModalID(props.l3.replaceAll(/\s/g, ""))}
         >
           {props.l3}

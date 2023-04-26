@@ -14,8 +14,7 @@ const M_skillCard = (props: propTypes) => {
         delay: 0.7 + 0.1 * props.listPos,
         ease: "easeInOut",
       }}
-      whileHover={{ scale: 1.1, transition: { delay: 0, duration: 0.5 } }}
-      className=" bg-neutral-100 w-1/6 h-20 rounded-lg flex justify-center items-center mr-4"
+      className=" bg-neutral-100 w-1/6 h-20 rounded-lg flex justify-center items-center m-1 "
     >
       <h1 className=" text-2xl uppercase">{props.title}</h1>
     </m.div>
