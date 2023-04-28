@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Navbar from "../../components/navbar/Navbar";
 import S_About from "./sections/S_About";
 import S_Activity from "./sections/S_Activity";
@@ -13,6 +13,7 @@ import {
   downloadResumeModal,
   efficientAndMaintainable,
   fullstackDevModal,
+  inDevModal,
   multimediaModal,
   programmingModal,
   prototypingModal,
@@ -21,6 +22,11 @@ import {
 
 const index = () => {
   const [modelStateID, setModalStateId] = useState<String>("");
+
+  //On Luanch Modal
+  useEffect(() => {
+    setModalStateId("dev");
+  }, []);
 
   return (
     <div className=" h-full">
@@ -35,6 +41,7 @@ const index = () => {
         {cleanFunctionalModal(modelStateID, setModalStateId)}
         {userFriendlyModal(modelStateID, setModalStateId)}
         {efficientAndMaintainable(modelStateID, setModalStateId)}
+        {inDevModal(modelStateID, setModalStateId)}
       </div>
 
       <Navbar />

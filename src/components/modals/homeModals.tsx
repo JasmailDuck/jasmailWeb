@@ -740,3 +740,83 @@ export const efficientAndMaintainable = (
     </AnimatePresence>
   );
 };
+export const inDevModal = (
+  modelStateID: String,
+  setModalStateId: React.Dispatch<React.SetStateAction<String>>
+) => {
+  return (
+    <AnimatePresence>
+      {modelStateID == "dev" && (
+        <m.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0, transition: { delay: 0.5, ease: "easeInOut" } }}
+          transition={{ ease: "easeInOut", duration: 0.5 }}
+          className="w-screen h-full top-0 left-0 absolute z-20 flex justify-center items-center bg-black/10 backdrop-blur-xl overflow-y-auto overflow-x-hidden"
+        >
+          <m.div className=" flex flex-col items-center justify-center w-full max-w-screen-xl  h-screen p-5">
+            <m.div
+              initial={{ opacity: 0, translateY: 100 }}
+              animate={{
+                opacity: 1,
+                translateY: 0,
+                transition: { ease: "easeInOut", delay: 0.5 },
+              }}
+              exit={{ opacity: 0, translateY: 100 }}
+              transition={{ ease: "easeInOut", duration: 0.5 }}
+              className=" bg-white  w-5/6 drop-shadow-2xl rounded-lg p-5 flex flex-col "
+            >
+              <div className=" mb-5">
+                <m.h1
+                  initial={{ opacity: 0, translateY: 100 }}
+                  animate={{ opacity: 1, translateY: 0 }}
+                  transition={{ ease: "easeInOut", duration: 0.5, delay: 0.6 }}
+                  className=" text-xl font-bold"
+                >
+                  Development Disclaimer
+                </m.h1>
+              </div>
+
+              <m.div className=" flex flex-wrap items-center  justify-self-center mb-5 ">
+                <h1 className=" text-neutral-500">
+                  Please take note that the website is still under major
+                  development. There will be buttons that won't click.
+                  Animations that will never display their brilliance. Links
+                  that link to the deepest known void...
+                </h1>
+                <h1 className=" text-neutral-500">
+                  Having said there is enough content available for me to be
+                  able to host this site, so please feel free to have a look.
+                </h1>
+                <a href="https://github.com/JasmailDuck" className="underline ">
+                  {" "}
+                  Or visit Github
+                </a>
+              </m.div>
+              <div className=" relative flex-1">
+                <m.button
+                  initial={{ scale: 0 }}
+                  animate={{ scale: 1 }}
+                  exit={{ scale: 0 }}
+                  whileHover={{
+                    scale: 1.05,
+                    transition: { delay: 0, ease: "easeInOut" },
+                  }}
+                  whileTap={{
+                    scale: 0.9,
+                    transition: { delay: 0, ease: "easeInOut" },
+                  }}
+                  transition={{ duration: 0.5, ease: "easeInOut", delay: 1.3 }}
+                  onClick={() => setModalStateId("")}
+                  className=" bg-gradient-to-br from-cyan-400 to-green-400 p-3 rounded-lg w-32 text-white font-bold absolute right-0 -bottom-10  "
+                >
+                  I Understand
+                </m.button>
+              </div>
+            </m.div>
+          </m.div>
+        </m.div>
+      )}
+    </AnimatePresence>
+  );
+};

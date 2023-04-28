@@ -13,7 +13,7 @@ const Navbar = () => {
     aboutSection = document.getElementById("S_AboutWrapper");
     servicesSection = document.getElementById("S_ServiceWrapper");
     projectSection = document.getElementById("S_ProjectWrapper");
-  }, []);
+  });
 
   return (
     <nav id="navbarwrapper" className="h-20 flex justify-center">
