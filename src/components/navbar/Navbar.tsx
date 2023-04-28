@@ -1,6 +1,20 @@
-import { Link } from "react-router-dom";
+import { useEffect } from "react";
 
 const Navbar = () => {
+  let aboutSection: HTMLElement | null;
+  let servicesSection: HTMLElement | null;
+  let projectSection: HTMLElement | null;
+
+  const handleScrollToOnClick = (element: HTMLElement | null) => {
+    if (element) element.scrollIntoView({ behavior: "smooth" });
+  };
+
+  useEffect(() => {
+    aboutSection = document.getElementById("S_AboutWrapper");
+    servicesSection = document.getElementById("S_ServiceWrapper");
+    projectSection = document.getElementById("S_ProjectWrapper");
+  }, []);
+
   return (
     <nav id="navbarwrapper" className="h-20 flex justify-center">
       <div
@@ -10,15 +24,24 @@ const Navbar = () => {
         <h1 className=" flex-1  ">Jasmail Duck</h1>
 
         <div id="navlinkcontainer" className=" flex">
-          <Link title="About" to={"#About"} className="mx-2">
+          <div
+            className="mx-2 hover:cursor-pointer"
+            onClick={() => handleScrollToOnClick(aboutSection)}
+          >
             About
-          </Link>
-          <Link title="Services" to="/#S_ServiceWrapper" className="mx-2">
+          </div>
+          <div
+            className="mx-2 hover:cursor-pointer"
+            onClick={() => handleScrollToOnClick(servicesSection)}
+          >
             Services
-          </Link>
-          <Link title="Projects" to={"#Projects"} className="mx-2">
+          </div>
+          <div
+            className="mx-2 hover:cursor-pointer"
+            onClick={() => handleScrollToOnClick(projectSection)}
+          >
             Projects
-          </Link>
+          </div>
         </div>
       </div>
     </nav>
