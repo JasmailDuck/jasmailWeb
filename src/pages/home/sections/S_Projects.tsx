@@ -4,6 +4,7 @@ import { motion as m } from "framer-motion";
 import { useEffect, useState } from "react";
 import movieBrowserThumbnail from "../../../assets/projectThumbnails/movieBrowser.png";
 import uniAdmin from "../../../assets/projectThumbnails/uniAdmin.png";
+import booksThumbnail from "../../../assets/projectThumbnails/books.png";
 
 const S_Projects = () => {
   const [moveBy, setMoveBy] = useState(0);
@@ -16,13 +17,13 @@ const S_Projects = () => {
   return (
     <section
       id="S_ProjectWrapper"
-      className=" flex justify-center overflow-x-hidden mb-5"
+      className=" flex justify-center overflow-x-hidden mb-5 bg-neutral-100"
     >
       <div
         id="S_Project"
         className=" max-w-screen-xl w-full flex flex-col px-5 "
       >
-        <div className=" mb-20">
+        <div className=" mb-20 mt-10">
           <h1 className="text-3xl font-semibold  w-44 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-green-400 mb-5 tracking-widest">
             PROJECTS
           </h1>
@@ -64,7 +65,11 @@ const S_Projects = () => {
             />
             <S_projectCard title="Music Player" type="Android Dev" />
             <S_projectCard title="Pixel Rom Flasher" type="Software Dev" />
-            <S_projectCard title="Bookselling Showcase" type="Data Analysis" />
+            <S_projectCard
+              title="Bookselling Showcase"
+              type="Data Analysis"
+              img={booksThumbnail}
+            />
             <S_projectCard title="Chat GPT Discord Bot" type="Bot Dev" />
             <S_projectCard title="Notification Syncer" type="Software Dev" />
           </m.div>
