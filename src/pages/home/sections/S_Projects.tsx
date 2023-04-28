@@ -2,6 +2,9 @@ import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/solid";
 import S_projectCard from "../../../components/cards/S_projectCard";
 import { motion as m } from "framer-motion";
 import { useEffect, useState } from "react";
+import movieBrowserThumbnail from "../../../assets/projectThumbnails/movieBrowser.png";
+import uniAdmin from "../../../assets/projectThumbnails/uniAdmin.png";
+import booksThumbnail from "../../../assets/projectThumbnails/books.png";
 
 const S_Projects = () => {
   const [moveBy, setMoveBy] = useState(0);
@@ -14,13 +17,13 @@ const S_Projects = () => {
   return (
     <section
       id="S_ProjectWrapper"
-      className=" flex justify-center overflow-x-hidden mb-5"
+      className=" flex justify-center overflow-x-hidden mb-5 bg-neutral-100"
     >
       <div
         id="S_Project"
         className=" max-w-screen-xl w-full flex flex-col px-5 "
       >
-        <div className=" mb-20">
+        <div className=" mb-20 mt-10">
           <h1 className="text-3xl font-semibold  w-44 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-green-400 mb-5 tracking-widest">
             PROJECTS
           </h1>
@@ -46,14 +49,29 @@ const S_Projects = () => {
             transition={{ duration: 1, ease: "anticipate" }}
             className=" absolute h-full flex  "
           >
-            <S_projectCard title="Data Mining and Warehouse" type="Database" />
-            <S_projectCard title="Data Mining and Warehouse" type="Database" />
-            <S_projectCard title="Data Mining and Warehouse" type="Database" />
-            <S_projectCard title="Data Mining and Warehouse" type="Database" />
-            <S_projectCard title="Data Mining and Warehouse" type="Database" />
-            <S_projectCard title="Data Mining and Warehouse" type="Database" />
-            <S_projectCard title="Data Mining and Warehouse" type="Database" />
-            <S_projectCard title="Data Mining and Warehouse" type="Database" />
+            <S_projectCard
+              title="Data Mining and Warehouse"
+              type="Data Analysis"
+            />
+            <S_projectCard
+              title="Movie Browser"
+              type="Web Full Stack"
+              img={movieBrowserThumbnail}
+            />
+            <S_projectCard
+              title="University Admission Tool"
+              type="Web Full Stack"
+              img={uniAdmin}
+            />
+            <S_projectCard title="Music Player" type="Android Dev" />
+            <S_projectCard title="Pixel Rom Flasher" type="Software Dev" />
+            <S_projectCard
+              title="Bookselling Showcase"
+              type="Data Analysis"
+              img={booksThumbnail}
+            />
+            <S_projectCard title="Chat GPT Discord Bot" type="Bot Dev" />
+            <S_projectCard title="Notification Syncer" type="Software Dev" />
           </m.div>
         </div>
         <div className=" z-10 flex justify-end h-20">
