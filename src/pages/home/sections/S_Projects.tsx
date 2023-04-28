@@ -2,6 +2,8 @@ import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/solid";
 import S_projectCard from "../../../components/cards/S_projectCard";
 import { motion as m } from "framer-motion";
 import { useEffect, useState } from "react";
+import movieBrowserThumbnail from "../../../assets/projectThumbnails/movieBrowser.png";
+import uniAdmin from "../../../assets/projectThumbnails/uniAdmin.png";
 
 const S_Projects = () => {
   const [moveBy, setMoveBy] = useState(0);
@@ -46,14 +48,25 @@ const S_Projects = () => {
             transition={{ duration: 1, ease: "anticipate" }}
             className=" absolute h-full flex  "
           >
-            <S_projectCard title="Data Mining and Warehouse" type="Database" />
-            <S_projectCard title="Data Mining and Warehouse" type="Database" />
-            <S_projectCard title="Data Mining and Warehouse" type="Database" />
-            <S_projectCard title="Data Mining and Warehouse" type="Database" />
-            <S_projectCard title="Data Mining and Warehouse" type="Database" />
-            <S_projectCard title="Data Mining and Warehouse" type="Database" />
-            <S_projectCard title="Data Mining and Warehouse" type="Database" />
-            <S_projectCard title="Data Mining and Warehouse" type="Database" />
+            <S_projectCard
+              title="Data Mining and Warehouse"
+              type="Data Analysis"
+            />
+            <S_projectCard
+              title="Movie Browser"
+              type="Web Full Stack"
+              img={movieBrowserThumbnail}
+            />
+            <S_projectCard
+              title="University Admission Tool"
+              type="Web Full Stack"
+              img={uniAdmin}
+            />
+            <S_projectCard title="Music Player" type="Android Dev" />
+            <S_projectCard title="Pixel Rom Flasher" type="Software Dev" />
+            <S_projectCard title="Bookselling Showcase" type="Data Analysis" />
+            <S_projectCard title="Chat GPT Discord Bot" type="Bot Dev" />
+            <S_projectCard title="Notification Syncer" type="Software Dev" />
           </m.div>
         </div>
         <div className=" z-10 flex justify-end h-20">
