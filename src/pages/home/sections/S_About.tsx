@@ -6,7 +6,7 @@ const S_About = () => {
   return (
     <section
       id="S_AboutWrapper"
-      className=" flex justify-center h-screen overflow-x-hidden mb-5"
+      className=" flex justify-center overflow-x-hidden mb-32"
     >
       <div id="S_About" className=" max-w-screen-xl w-full flex flex-col px-5 ">
         <div className=" flex mb-32 ">
