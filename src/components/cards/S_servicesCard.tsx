@@ -42,7 +42,7 @@ const S_servicesCard = (props: propTypes) => {
         transition={{ delay: 0.3, ease: "backInOut", duration: 1 }}
         className=" mb-5 "
       >
-        <props.icon className=" w-20 " />
+        <props.icon className=" w-20  " />
       </m.div>
       <div className="mb-5">
         <m.h1
@@ -50,7 +50,7 @@ const S_servicesCard = (props: propTypes) => {
           initial={{ opacity: 0, y: 100 }}
           animate={titleInView ? { opacity: 1, y: 0 } : {}}
           transition={{ delay: 0.3, ease: "backInOut", duration: 1 }}
-          className="text-3xl font-bold mb-5"
+          className="text-3xl font-bold mb-5 text-white"
         >
           {props.title}
         </m.h1>
@@ -64,7 +64,7 @@ const S_servicesCard = (props: propTypes) => {
           {props.desc}
         </m.p>
       </div>
-      <div className=" font-bold text-lg flex flex-col">
+      <div className=" font-bold text-lg flex flex-col text-white">
         <m.div
           ref={l1Ref}
           initial={{ opacity: 0, y: 100 }}

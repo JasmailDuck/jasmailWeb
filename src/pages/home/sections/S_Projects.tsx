@@ -27,16 +27,16 @@ const S_Projects = () => {
           <h1 className="text-3xl font-semibold  w-44 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-green-400 mb-5 tracking-widest">
             PROJECTS
           </h1>
-          <div className="flex  ">
+          <div className="flex lg:flex-row flex-col ">
             <div className="flex-1 ">
               <h1 className="text-6xl w-2/3 font-black ">
                 A highlight of my recent doings.
               </h1>
             </div>
 
-            <div className=" relative w-52">
+            <div className=" relative w-52 lg:mt-0 mt-10">
               <div className="h-14 w-40 bg-gradient-to-r from-cyan-400 to-green-400 absolute top-2 left-2 rounded-md"></div>
-              <button className=" bg-black absolute h-14 w-40 text-white rounded-md text-lg">
+              <button className=" bg-black absolute h-14 w-40 text-white rounded-md text-lg ">
                 View all projects
               </button>
             </div>

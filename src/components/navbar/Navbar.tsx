@@ -16,10 +16,10 @@ const Navbar = () => {
   });
 
   return (
-    <nav id="navbarwrapper" className="h-20 flex justify-center">
+    <nav id="navbarwrapper" className="h-20 flex justify-center text-white">
       <div
         id="navbarcontainer"
-        className=" max-w-screen-xl h-full w-full flex items-center px-5 text-lg tracking-wider"
+        className=" lg:max-w-screen-xl h-full w-full flex items-center px-5 text-lg tracking-wider"
       >
         <h1 className=" flex-1  ">Jasmail Duck</h1>
 
