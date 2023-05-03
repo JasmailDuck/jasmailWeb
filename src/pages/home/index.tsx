@@ -19,6 +19,7 @@ import {
   prototypingModal,
   userFriendlyModal,
 } from "../../components/modals/homeModals";
+import Footer from "../../components/footer/footer";
 
 const index = () => {
   const [modelStateID, setModalStateId] = useState<String>("");
@@ -51,6 +52,7 @@ const index = () => {
       <S_Blogs />
       <S_About />
       <S_Activity />
+      <Footer />
     </div>
   );
 };

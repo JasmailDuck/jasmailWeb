@@ -42,7 +42,7 @@ const S_Service = (props: propTypes) => {
         id="S_Services"
         className=" max-w-screen-xl w-full flex flex-col px-5"
       >
-        <div className=" flex flex-col items-center mb-32">
+        <div className=" flex flex-col items-center lg:mb-32">
           <m.h1
             ref={titleRef}
             initial={{ opacity: 0, y: 100 }}
@@ -59,7 +59,7 @@ const S_Service = (props: propTypes) => {
             initial={{ opacity: 0, y: 100 }}
             animate={subtitleInView ? { opacity: 1, y: 0 } : {}}
             transition={{ delay: 0.2, ease: "backInOut", duration: 1 }}
-            className="text-6xl w-2/3 text-center font-black  "
+            className="lg:text-6xl w-2/3 text-center font-black text-white text-3xl "
           >
             Workflow that ensures all requirements are met
           </m.h1>
@@ -76,7 +76,7 @@ const S_Service = (props: propTypes) => {
           </m.div>
         </div>
 
-        <div className="flex justify-center ">
+        <div className="flex justify-center lg:flex-row flex-col ">
           <S_servicesCard
             title="What I can do for you"
             desc="Consistency, Fast, and Reliable. Here are some of the services and skill set I provide:"

@@ -30,25 +30,28 @@ const S_Overview = (props: propTypes) => {
       {/* Section Container */}
       <div
         id="S_OverviewContainer"
-        className=" max-w-screen-xl w-full flex px-5 mb-96"
+        className=" lg:max-w-screen-xl w-full flex px-5 mb-96"
       >
         {/* Intro Content Container */}
         <div id="S_OverviewIntoContainer" className=" flex-1 flex items-start ">
           {/* Intro Content */}
-          <div id="S_OverviewIntroContent" className=" h-96 mt-32 w-full">
+          <div
+            id="S_OverviewIntroContent"
+            className=" h-96 lg:mt-32 mt-20 w-full"
+          >
             {/* Intro Bio Container */}
             <m.div
               initial={{ y: 100, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ ease: "backInOut", duration: 1 }}
               id="S_OverviewBioContainer"
-              className=" text-6xl font-extrabold flex flex-col "
+              className=" text-6xl font-extrabold flex flex-col  "
             >
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-green-400 mb-1">
                 Fullstack Developer
               </span>
-              <span className="mb-1">Data Analyst</span>
-              <span className="mb-1">BCIS</span>
+              <span className="mb-1 text-white">Data Analyst</span>
+              <span className="mb-1 text-white">BCIS</span>
             </m.div>
 
             {/* Intro Bio Description */}
@@ -69,14 +72,14 @@ const S_Overview = (props: propTypes) => {
               animate={{ y: 0, opacity: 1 }}
               transition={{ ease: "backInOut", duration: 1, delay: 0.5 }}
               id="S_OverviewOptionsContainer"
-              className=" flex w-full h-12 font-bold"
+              className=" flex lg:flex-row w-full h-12 font-bold flex-col lg:mt-0 mt-10"
             >
               <div className=" relative w-40">
                 <div className="h-12 w-36 bg-gradient-to-r from-cyan-400 to-green-400 absolute top-2 left-2 rounded-md" />
                 <m.button
                   whileHover={{ x: 8, y: 8 }}
                   whileTap={{ backgroundColor: "transparent" }}
-                  className=" bg-black absolute h-12 w-36 text-white rounded-md"
+                  className=" bg-neutral-800 absolute h-12 w-36 text-white rounded-md"
                 >
                   Contact
                 </m.button>
@@ -86,7 +89,7 @@ const S_Overview = (props: propTypes) => {
                 onClick={() => props.setModalState("download")}
                 onMouseEnter={() => setResumeIsHovered(true)}
                 onMouseLeave={() => setResumeIsHovered(false)}
-                className="ml-5 text-xl self-center flex hover:cursor-pointer bg-white"
+                className="lg:ml-5 text-xl lg:self-center flex hover:cursor-pointer text-white mt-20 lg:mt-0 "
               >
                 <h1>Download Resume</h1>
 
@@ -99,7 +102,7 @@ const S_Overview = (props: propTypes) => {
         </div>
 
         {/* Intro Image Container */}
-        <div className=" flex-1 "></div>
+        <div className=" lg:flex-1 lg:flex hidden "></div>
       </div>
     </section>
   );

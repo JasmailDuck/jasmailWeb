@@ -11,9 +11,12 @@ const S_Blogs = () => {
         <div className=" absolute w-full h-72 bg-black -top-72" />
       </div>
 
-      <div id="S_Blog" className=" max-w-screen-xl w-full flex  px-5 ">
+      <div
+        id="S_Blog"
+        className=" max-w-screen-xl w-full flex lg:flex-row flex-col  px-5 "
+      >
         <div className=" flex-1">
-          <div className="sticky top-0 py-5">
+          <div className="lg:sticky top-0 py-5">
             <h1 className="text-3xl font-bold w-24 text-transparent bg-clip-text  bg-gradient-to-r from-cyan-400 to-green-400 tracking-widest mb-5">
               {" "}
               BLOG{" "}

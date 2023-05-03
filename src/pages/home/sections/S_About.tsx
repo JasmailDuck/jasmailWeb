@@ -6,10 +6,10 @@ const S_About = () => {
   return (
     <section
       id="S_AboutWrapper"
-      className=" flex justify-center h-screen overflow-x-hidden mb-5"
+      className=" flex justify-center overflow-x-hidden mb-32"
     >
       <div id="S_About" className=" max-w-screen-xl w-full flex flex-col px-5 ">
-        <div className=" flex mb-32 ">
+        <div className=" flex lg:flex-row flex-col mb-32 ">
           <div className="pr-5">
             <h1 className="text-3xl font-semibold  text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-green-400 tracking-widest">
               FULL STACK DEVELOPER
@@ -19,7 +19,7 @@ const S_About = () => {
             </h1>
             <h1 className="text-5xl w-2/3 font-black ">That's me!</h1>
           </div>
-          <div className=" flex-1 text-lg text-neutral-500 pl-5 border-l">
+          <div className=" flex-1 text-lg text-neutral-500 lg:pl-5 lg:border-l ">
             <p>
               Over the past 4 years, I have had the privilege of working on
               countless projects, leveraging my skills in development and
@@ -33,11 +33,11 @@ const S_About = () => {
             </p>
           </div>
         </div>
-        <div className=" flex">
-          <div className=" flex-1 flex flex-col mr-10 ">
-            <div className="flex items-center mb-16">
-              <AcademicCapIcon className=" w-10 mr-5" />
-              <h1 className=" text-3xl font-bold">Education</h1>
+        <div className=" flex lg:flex-row flex-col">
+          <div className=" flex-1 flex flex-col lg:mr-10 lg:mb-0 mb-10 ">
+            <div className="flex items-center lg:mb-16">
+              <AcademicCapIcon className=" w-10 lg:mr-5 text-white" />
+              <h1 className=" text-3xl font-bold text-white">Education</h1>
             </div>
 
             <S_aboutCard
@@ -55,10 +55,12 @@ const S_About = () => {
             <div className="border-b " />
           </div>
 
-          <div className=" flex-1 flex flex-col ml-10 ">
-            <div className="flex items-center mb-16">
-              <BriefcaseIcon className=" w-10 mr-5" />
-              <h1 className=" text-3xl font-bold">Work Experience</h1>
+          <div className=" flex-1 flex flex-col lg:ml-10 ">
+            <div className="flex items-center lg:mb-16">
+              <BriefcaseIcon className=" w-10 mr-5 text-white" />
+              <h1 className=" text-3xl font-bold text-white">
+                Work Experience
+              </h1>
             </div>
 
             <S_aboutCard

@@ -13,7 +13,7 @@ const S_Activity = () => {
           <h1 className="text-3xl font-semibold  w-44 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-green-400 mb-5 tracking-widest">
             ACTIVITES
           </h1>
-          <h1 className="text-6xl  font-black ">
+          <h1 className="text-6xl  font-black text-white ">
             It's not just all about tech!
           </h1>
         </div>

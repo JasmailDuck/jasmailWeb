@@ -1,6 +1,13 @@
-import { ArrowLeftOnRectangleIcon } from "@heroicons/react/24/solid";
 import { AnimatePresence, motion as m } from "framer-motion";
 import M_skillCard from "../cards/M_skillCard";
+
+const downloadResume = () => {
+  window.open(
+    "https://onedrive.live.com/download?cid=8E2651BF1A64E22D&resid=8E2651BF1A64E22D%2157250",
+    "Resume Download"
+  );
+  return "";
+};
 
 //------------------------------------------------------ MODAL ------------------------------------------------------//
 export const downloadResumeModal = (
@@ -20,6 +27,8 @@ export const downloadResumeModal = (
             <h1 className=" text-3xl mb-5 font-bold  w-72">
               Downloading Resume
             </h1>
+            <div className=" hidden">{setTimeout(downloadResume, 3000)}</div>
+
             <m.div
               transition={{
                 repeat: Infinity,
@@ -44,7 +53,10 @@ export const downloadResumeModal = (
             >
               <h1 className=" text-neutral-500 text-md">
                 Download not started?{" "}
-                <span className=" underline hover: cursor-pointer">
+                <span
+                  onClick={() => downloadResume()}
+                  className=" underline hover: cursor-pointer"
+                >
                   Click Here
                 </span>
               </h1>
