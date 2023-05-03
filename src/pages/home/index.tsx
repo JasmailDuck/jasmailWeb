@@ -19,7 +19,7 @@ import {
   prototypingModal,
   userFriendlyModal,
 } from "../../components/modals/homeModals";
-import Footer from "../../components/footer/footer";
+import Footer from "../../components/footer/Footer";
 
 const index = () => {
   const [modelStateID, setModalStateId] = useState<String>("");
