@@ -31,7 +31,7 @@ const index = () => {
 
   return (
     <div className=" h-full">
-      <div className=" fixed h-full z-50 top-0">
+      {/* <div className=" fixed h-full z-50 top-0">
         {downloadResumeModal(modelStateID, setModalStateId)}
         {fullstackDevModal(modelStateID, setModalStateId)}
         {dataAnalysisModal(modelStateID, setModalStateId)}
@@ -43,16 +43,19 @@ const index = () => {
         {userFriendlyModal(modelStateID, setModalStateId)}
         {efficientAndMaintainable(modelStateID, setModalStateId)}
         {inDevModal(modelStateID, setModalStateId)}
-      </div>
+      </div> */}
 
       <Navbar />
-      <S_Overview modelStateID={modelStateID} setModalState={setModalStateId} />
+      <div className=" h-screen" />
+      <div className=" h-screen" />
+
+      {/* <S_Overview modelStateID={modelStateID} setModalState={setModalStateId} />
       <S_Service modelStateID={modelStateID} setModalState={setModalStateId} />
       <S_Projects />
       <S_Blogs />
       <S_About />
       <S_Activity />
-      <Footer />
+      <Footer /> */}
     </div>
   );
 };
