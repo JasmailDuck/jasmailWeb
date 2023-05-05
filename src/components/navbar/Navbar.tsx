@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
-import { AnimatePresence, delay, motion as m } from "framer-motion";
+import { AnimatePresence, motion as m } from "framer-motion";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 import GithubIcon from "../../assets/icons/I_Github.svg";
 import LinkedInIcon from "../../assets/icons/I_LinkedIn.svg";
 import TwitterIcon from "../../assets/icons/I_Twitter.svg";
 import GmailIcon from "../../assets/icons/I_Gmail.svg";
+import { PageUtils } from "../../utils/pageUtils";
 
 const Navbar = () => {
   let aboutSection: HTMLElement | null;
@@ -33,8 +34,9 @@ const Navbar = () => {
           }
           onClick={() => {
             setShowMenu("");
+            PageUtils.enableScrolling();
           }}
-          className=" h-20 rounded-lg justify-end px-2 mt-4 lg:hidden"
+          className=" h-20 rounded-lg justify-end px-2 mt-4 lg:hidden "
         >
           <XMarkIcon className=" w-10 text-white bg-neutral-700 p-1 rounded-md" />
         </m.div>
@@ -43,6 +45,7 @@ const Navbar = () => {
           layoutId="displayMenu"
           onClick={() => {
             setShowMenu("displayMenu");
+            PageUtils.disableScrolling();
           }}
           className=" bg-neutral-800 w-full h-20 rounded-lg flex items-center px-2 lg:hidden"
         >
@@ -98,7 +101,7 @@ const Navbar = () => {
 
       <AnimatePresence>
         {showMenu == "displayMenu" && (
-          <m.div className="w-full p-2 flex justify-center items-center flex-col ">
+          <m.div className="w-full p-2 flex items-center flex-col fixed top-20 bg-black z-10 h-screen ">
             <m.div
               layoutId="displayMenu"
               exit={{ transition: { delay: 0.5 } }}

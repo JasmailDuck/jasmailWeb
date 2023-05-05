@@ -1,7 +1,7 @@
 import { ArrowRightIcon } from "@heroicons/react/24/solid";
 import { AnimatePresence, delay, motion as m } from "framer-motion";
 import { useEffect, useState } from "react";
-import { PageUtils } from "../../../components/utils/pageUtils";
+import { PageUtils } from "../../../utils/pageUtils";
 
 interface propTypes {
   setModalState: React.Dispatch<React.SetStateAction<String>>;
