@@ -104,7 +104,6 @@ const Navbar = () => {
           <m.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
             className="w-full p-2 flex items-center flex-col fixed top-20 bg-black z-10 h-screen "
           >
             <m.div
@@ -132,7 +131,7 @@ const Navbar = () => {
               }}
               exit={{
                 opacity: 0,
-                translateY: -10,
+                translateY: -20,
                 transition: { ease: "easeInOut" },
               }}
               className=" font-bold text-3xl text-white tracking-wider"
@@ -148,7 +147,7 @@ const Navbar = () => {
               }}
               exit={{
                 opacity: 0,
-                translateY: -10,
+                translateY: -20,
                 transition: { ease: "easeInOut" },
               }}
               className=" text-lg text-neutral-400 tracking-wider mb-3"
@@ -165,7 +164,7 @@ const Navbar = () => {
                 }}
                 exit={{
                   opacity: 0,
-                  translateY: -10,
+                  translateY: -20,
                   transition: { ease: "easeInOut" },
                 }}
                 className=" bg-purple-900 w-14 h-14 flex justify-center items-center rounded-xl"
@@ -181,7 +180,7 @@ const Navbar = () => {
                 }}
                 exit={{
                   opacity: 0,
-                  translateY: -10,
+                  translateY: -20,
                   transition: { ease: "easeInOut" },
                 }}
                 className=" bg-[#0a66c2] w-14 h-14 flex justify-center items-center rounded-xl"
@@ -197,7 +196,7 @@ const Navbar = () => {
                 }}
                 exit={{
                   opacity: 0,
-                  translateY: -10,
+                  translateY: -20,
                   transition: { ease: "easeInOut" },
                 }}
                 className=" bg-[#1da1f2] w-14 h-14 flex justify-center items-center rounded-xl"
@@ -213,7 +212,7 @@ const Navbar = () => {
                 }}
                 exit={{
                   opacity: 0,
-                  translateY: -10,
+                  translateY: -20,
                   transition: { ease: "easeInOut" },
                 }}
                 className=" bg-[#ea4335] w-14 h-14 flex justify-center items-center rounded-xl"
