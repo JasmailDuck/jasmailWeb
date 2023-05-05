@@ -101,7 +101,12 @@ const Navbar = () => {
 
       <AnimatePresence>
         {showMenu == "displayMenu" && (
-          <m.div className="w-full p-2 flex items-center flex-col fixed top-20 bg-black z-10 h-screen ">
+          <m.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="w-full p-2 flex items-center flex-col fixed top-20 bg-black z-10 h-screen "
+          >
             <m.div
               layoutId="displayMenu"
               exit={{ transition: { delay: 0.5 } }}
