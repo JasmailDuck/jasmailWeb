@@ -145,7 +145,7 @@ const Navbar = () => {
               }}
               className=" text-lg text-neutral-400 tracking-wider mb-3"
             >
-              Visit my profiles on other websites.
+              Visit my profile on other websites.
             </m.h1>
             <div className="flex gap-2">
               <m.div
