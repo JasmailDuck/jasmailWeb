@@ -111,13 +111,34 @@ const Navbar = () => {
               exit={{ transition: { delay: 0.5 } }}
               className=" bg-neutral-800 rounded-lg tracking-wider flex flex-col p-2 mb-5 lg:max-w-screen-xl w-full"
             >
-              <m.div className=" w-full text-white text-xl p-2 flex items-center mb-2 uppercase">
+              <m.div
+                onClick={() => {
+                  PageUtils.enableScrolling;
+                  handleScrollToOnClick(aboutSection);
+                  setShowMenu("");
+                }}
+                className=" w-full text-white text-xl p-2 flex items-center mb-2 uppercase"
+              >
                 About
               </m.div>
-              <m.div className=" w-full text-white text-xl p-2 flex items-center mb-2 uppercase">
+              <m.div
+                onClick={() => {
+                  PageUtils.enableScrolling;
+                  handleScrollToOnClick(servicesSection);
+                  setShowMenu("");
+                }}
+                className=" w-full text-white text-xl p-2 flex items-center mb-2 uppercase"
+              >
                 Services
               </m.div>
-              <m.div className=" w-full text-white text-xl p-2 flex items-center mb-2 uppercase">
+              <m.div
+                onClick={() => {
+                  PageUtils.enableScrolling;
+                  handleScrollToOnClick(projectSection);
+                  setShowMenu("");
+                }}
+                className=" w-full text-white text-xl p-2 flex items-center mb-2 uppercase"
+              >
                 Projects
               </m.div>
             </m.div>
