@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        primaryFont: ["Barlow", "sans-serif"],
+        primaryFont: ["Saira", "sans-serif"],
       },
       backgroundImage: {
         snowboard: 'url("assets/bg/bg_snowboard.jpg")',
