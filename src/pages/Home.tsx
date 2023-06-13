@@ -1,23 +1,21 @@
 import { ArrowRightCircleIcon } from "@heroicons/react/24/outline";
-import SingleDataUnitCard from "../../components/cards/SingleDataUnitCard";
-import AttributeTextWithBorder from "../../components/text/AttributeTextWithBorder";
+import SingleDataUnitCard from "../components/cards/SingleDataUnitCard";
+import AttributeTextWithBorder from "../components/text/AttributeTextWithBorder";
 
-import Web3ThumbnailPic from "../../assets/thumbnails/web3Thumbnail.png";
-import Web3ThumbnailPic2 from "../../assets/thumbnails/web3Thumbnail2.png";
-import Web3ThumbnailPic3 from "../../assets/thumbnails/web3Thumbnail3.png";
+import Web3ThumbnailPic from "../assets/thumbnails/web3Thumbnail.png";
+import Web3ThumbnailPic2 from "../assets/thumbnails/web3Thumbnail2.png";
+import Web3ThumbnailPic3 from "../assets/thumbnails/web3Thumbnail3.png";
 
 const Home = () => {
   return (
-    <div className="flex-1 flex justify-center pt-16 overflow-y-auto">
-      <div className=" w-full h-full max-w-screen-lg flex flex-col  ">
+    <div className=" flex justify-center pt-16 overflow-y-auto">
+      <div className=" w-full  max-w-screen-lg flex flex-col  ">
         {/* Title Container */}
         <div className=" w-full ">
           <h1 className=" text-4xl text-white font-bold">
             Fullstack Developer & Data Analyst
           </h1>
-          <h2 className=" text-neutral-400">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, aut!
-          </h2>
+          <h2 className=" text-neutral-400 "></h2>
         </div>
         {/* Seperator */}
         <div className=" border-b border-neutral-800 w-full my-16" />
